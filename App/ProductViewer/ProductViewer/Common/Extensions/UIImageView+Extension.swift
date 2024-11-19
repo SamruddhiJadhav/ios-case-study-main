@@ -10,18 +10,18 @@ import UIKit
 
 extension UIImageView {
   func image(
-    for imageUrl: String?,
+    for imageUrl: String,
     contentMode: ContentMode? = nil,
-    placeholder: UIImage?,
+    placeholder: UIImage? = UIImage(named: "placeholder"),
     imageProvider: ImageProviderProtocol,
-    size: CGSize?,
+    size: CGSize,
     completion: (() -> Void)? = nil
   ) {
       clipsToBounds = true
       self.contentMode = .center
       placeholderFallback(placeholder)
 
-      if let imageUrl = imageUrl, let downloadableImageUrl = URL(string: imageUrl) {
+      if let downloadableImageUrl = URL(string: imageUrl) {
           imageProvider.loadImage(from: downloadableImageUrl, resizeTo: size) { [weak self] image in
             DispatchQueue.main.async {
                 self?.image = image

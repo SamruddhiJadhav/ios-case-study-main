@@ -104,7 +104,6 @@ final class ProductImageDetailsView: UIView {
         fulfilmentTypeLabel.text = viewModel.fulfillmentType
         productImage.image(
             for: viewModel.imageURL,
-            placeholder: UIImage(named: "placeholder"), 
             imageProvider: imageProvider,
             size: CGSize(width: Constants.imageDimention, height: Constants.imageDimention)
         )
