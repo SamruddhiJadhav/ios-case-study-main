@@ -39,8 +39,14 @@ final class DealDetailsViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavigationBar()
     }
+}
 
-    private func setupViews() {
+private extension DealDetailsViewController {
+    @objc func didTapBack() {
+        presenter?.didTapBack()
+    }
+
+    func setupViews() {
         view.backgroundColor = .white
 
         view.addSubview(detailsView)
@@ -52,22 +58,22 @@ final class DealDetailsViewController: UIViewController {
         ])
     }
 
-    private func setupNavigationBar() {
+    func setupNavigationBar() {
         navigationController?.navigationBar.barStyle = .default
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = .backButton(self, action: #selector(didTapBack))
         navigationItem.title = "Detail"
     }
-    
-    private func setupLoadingIndicator() {
+      
+    func setupLoadingIndicator() {
         loadingIndicatorView.frame = view.frame
         loadingIndicatorView.backgroundColor = .white
         loadingIndicatorView.isHidden = true
-        
+            
         setupSpinner()
     }
-    
-    private func setupSpinner() {
+      
+    func setupSpinner() {
         loadingIndicator.center = CGPoint(
             x: UIScreen.main.bounds.size.width / 2,
             y: UIScreen.main.bounds.size.height / 2
@@ -111,10 +117,4 @@ extension DealDetailsViewController: DealDetailsViewProtocol {
             self.loadingIndicatorView.isHidden = true
         }
     }
-}
-
-private extension DealDetailsViewController {
-  @objc func didTapBack() {
-    presenter?.didTapBack()
-  }
 }
