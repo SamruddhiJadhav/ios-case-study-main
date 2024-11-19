@@ -33,7 +33,7 @@ final class DealDetailsService: DealDetailsServiceProtocol {
             completion(.failure(ServiceError.invalidURL))
             return
         }
-        let dealDetailsEndPoint = DealDetailsEndPoint.get(id).url(baseURL: url)
+        let dealDetailsEndPoint = DealDetailsEndPoint.get(dealID: id).url(baseURL: url)
         client.get(from: dealDetailsEndPoint) { result in
             switch result {
             case let .success((data, response)):
