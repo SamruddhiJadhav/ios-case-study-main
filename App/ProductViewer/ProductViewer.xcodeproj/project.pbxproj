@@ -207,13 +207,14 @@
 		5BEF080F1D663283006BF0C0 /* DealListing */ = {
 			isa = PBXGroup;
 			children = (
-				965B6A6A283F57DC0080E9B4 /* View */,
-				880829752CC36CDB0011BA18 /* Interactor */,
-				880829472CC0F1300011BA18 /* Presenter */,
-				880829662CC23E090011BA18 /* Entity */,
-				880829742CC36CD10011BA18 /* Router */,
-				880829732CC36C7E0011BA18 /* Mapper */,
 				880829722CC36C1C0011BA18 /* Builder */,
+				880829632CC23D770011BA18 /* DataSourceBuilder */,
+				880829662CC23E090011BA18 /* Entity */,
+				880829752CC36CDB0011BA18 /* Interactor */,
+				880829732CC36C7E0011BA18 /* Mapper */,
+				880829472CC0F1300011BA18 /* Presenter */,
+				880829742CC36CD10011BA18 /* Router */,
+				965B6A6A283F57DC0080E9B4 /* View */,
 			);
 			path = DealListing;
 			sourceTree = "<group>";
@@ -291,7 +292,6 @@
 		880829662CC23E090011BA18 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				880829632CC23D770011BA18 /* DataSourceBuilder */,
 				880829672CC240870011BA18 /* DealViewModel.swift */,
 			);
 			path = Entity;
@@ -300,13 +300,13 @@
 		8808296C2CC3680D0011BA18 /* DealDetails */ = {
 			isa = PBXGroup;
 			children = (
+				8808297A2CC36D770011BA18 /* Builder */,
 				880829922CC3AB680011BA18 /* DataSourceBuilder */,
 				8808297B2CC36D810011BA18 /* Entity */,
-				8808297A2CC36D770011BA18 /* Builder */,
-				880829792CC36D6A0011BA18 /* Mapper */,
-				880829782CC36D5E0011BA18 /* Router */,
 				880829772CC36D580011BA18 /* Interactor */,
+				880829792CC36D6A0011BA18 /* Mapper */,
 				880829762CC36D500011BA18 /* Presenter */,
+				880829782CC36D5E0011BA18 /* Router */,
 				8808296D2CC368160011BA18 /* View */,
 			);
 			path = DealDetails;
