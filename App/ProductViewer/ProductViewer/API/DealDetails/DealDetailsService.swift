@@ -15,13 +15,13 @@ protocol DealDetailsServiceProtocol {
 }
 
 final class DealDetailsService: DealDetailsServiceProtocol {
-    private let url: URL
+    private let url: URL?
     private let client: HTTPClient
     
     typealias Result = DealDetailsServiceProtocol.Result
     
     init(
-        url: URL = Environment.baseURL,
+        url: URL? = Environment.baseURL,
         client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     ) {
         self.url = url
@@ -29,8 +29,12 @@ final class DealDetailsService: DealDetailsServiceProtocol {
     }
     
     func getDealDetails(for id: Int, completion: @escaping (Result) -> Void) {
-        let url = DealDetailsEndPoint.get(id).url(baseURL: url)
-        client.get(from: url) { result in
+        guard let url = url else {
+            completion(.failure(ServiceError.invalidURL))
+            return
+        }
+        let dealDetailsEndPoint = DealDetailsEndPoint.get(id).url(baseURL: url)
+        client.get(from: dealDetailsEndPoint) { result in
             switch result {
             case let .success((data, response)):
                 completion(DealDetailsService.map(data, from: response))
