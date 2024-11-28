@@ -17,8 +17,8 @@ final class ProductImageDetailsView: UIView {
         static let imageDimention: CGFloat = 343
     }
 
-    private lazy var productImage: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var productImage: DownloadableImageView = {
+        let imageView = DownloadableImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = Constants.cornerRadius
         imageView.clipsToBounds = true

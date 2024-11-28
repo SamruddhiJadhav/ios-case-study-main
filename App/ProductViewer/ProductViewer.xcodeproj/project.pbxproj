@@ -43,7 +43,6 @@
 		880829992CC4169D0011BA18 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829982CC4169D0011BA18 /* Environment.swift */; };
 		8808299C2CC4C0BD0011BA18 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8808299B2CC4C0BD0011BA18 /* SDWebImage */; };
 		880829A02CC4C15F0011BA18 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808299F2CC4C15F0011BA18 /* ImageProvider.swift */; };
-		880829A32CC4C2050011BA18 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A22CC4C2050011BA18 /* UIImageView+Extension.swift */; };
 		880829A52CC4E62F0011BA18 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */; };
 		880829A72CC5D35C0011BA18 /* DealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A62CC5D35C0011BA18 /* DealDetailsView.swift */; };
 		880829A92CC5D9FB0011BA18 /* ProductImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */; };
@@ -121,7 +120,6 @@
 		880829962CC413850011BA18 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		880829982CC4169D0011BA18 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		8808299F2CC4C15F0011BA18 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		880829A22CC4C2050011BA18 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		880829A62CC5D35C0011BA18 /* DealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsView.swift; sourceTree = "<group>"; };
 		880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageDetailsView.swift; sourceTree = "<group>"; };
@@ -478,7 +476,6 @@
 		880829A12CC4C1E70011BA18 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				880829A22CC4C2050011BA18 /* UIImageView+Extension.swift */,
 				880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */,
 			);
 			path = Extensions;
@@ -698,7 +695,6 @@
 				880829A52CC4E62F0011BA18 /* UINavigationBar+Extension.swift in Sources */,
 				5BEF081F1D663598006BF0C0 /* DealViewCell.swift in Sources */,
 				8808298B2CC3A1F40011BA18 /* DealDetailsInteractor.swift in Sources */,
-				880829A32CC4C2050011BA18 /* UIImageView+Extension.swift in Sources */,
 				880829912CC3A60B0011BA18 /* DealDetailsMapper.swift in Sources */,
 				887E7EBC2CC62C680033A861 /* DealsListBuilder.swift in Sources */,
 				887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */,
