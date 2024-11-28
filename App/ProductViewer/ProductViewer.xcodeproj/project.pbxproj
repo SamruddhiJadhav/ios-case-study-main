@@ -68,6 +68,8 @@
 		887E7EDB2CC65ADE0033A861 /* DealDetails+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */; };
 		88B6433E2CF821AC004209F8 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */; };
 		88B643402CF866C7004209F8 /* ImageDownsampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */; };
+		88B643432CF881E4004209F8 /* MainQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643422CF881E4004209F8 /* MainQueueDecorator.swift */; };
+		88B643452CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */; };
 		96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5F5280EE0C0009338BF /* Autolayout.swift */; };
 		96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */; };
 		96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */; };
@@ -146,6 +148,8 @@
 		887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DealDetails+Mock.swift"; sourceTree = "<group>"; };
 		88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
 		88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownsampler.swift; sourceTree = "<group>"; };
+		88B643422CF881E4004209F8 /* MainQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDecorator.swift; sourceTree = "<group>"; };
+		88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainQueueDecorator+DealListViewProtocol.swift"; sourceTree = "<group>"; };
 		9636D41727FF77E700FE8106 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D6F5F5280EE0C0009338BF /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		5B259CC81D6630E0001D755F /* ProductViewer */ = {
 			isa = PBXGroup;
 			children = (
+				88B643412CF881CB004209F8 /* MainQueueDecorator */,
 				8808299E2CC4C14A0011BA18 /* Common */,
 				880829712CC36BA00011BA18 /* Network */,
 				880829442CC0C73C0011BA18 /* API */,
@@ -261,6 +266,7 @@
 			children = (
 				5BEF08131D663304006BF0C0 /* DealListViewController.swift */,
 				8808295E2CC2386B0011BA18 /* DealListViewProtocol.swift */,
+				88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -542,6 +548,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		88B643412CF881CB004209F8 /* MainQueueDecorator */ = {
+			isa = PBXGroup;
+			children = (
+				88B643422CF881E4004209F8 /* MainQueueDecorator.swift */,
+			);
+			path = MainQueueDecorator;
+			sourceTree = "<group>";
+		};
 		9636D41827FF77E700FE8106 /* ProductViewerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,7 +698,9 @@
 				880829872CC38CD20011BA18 /* DealView.swift in Sources */,
 				880829612CC239290011BA18 /* DealListPresenterProtocol.swift in Sources */,
 				880829592CC116360011BA18 /* DealListInteractor.swift in Sources */,
+				88B643452CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
+				88B643432CF881E4004209F8 /* MainQueueDecorator.swift in Sources */,
 				880829552CC10BCF0011BA18 /* DealDetailsService.swift in Sources */,
 				96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */,
 				8808296A2CC333980011BA18 /* ProductDetailsScrollView.swift in Sources */,

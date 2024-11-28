@@ -16,12 +16,15 @@ struct DealsListBuilder: DealsListBuilding {
     func build() -> UIViewController {
         let imageProvider = ImageProvider()
         let view = DealListViewController(imageProvider: imageProvider)
-        let wireframe = DealListRouter(dealDetailsBuilder: DealDetailsBuilder())
+        let wireframe = DealListRouter(dealDetailsBuilder: DealDetailsBuilder(), view: view)
         let dealService = DealsListService()
         let dataSourceBuilder = DealsListDataSourceBuilder()
         let interactor = DealListInteractor(dealsListService: dealService)
+        
+        let mainQueueDecoratedView = MainQueueDecorator(decoratee: view)
+        
         let presenter = DealListPresenter(
-            view: view,
+            view: mainQueueDecoratedView,
             wireframe: wireframe,
             interactor: interactor,
             dataSourceBuilder: dataSourceBuilder
