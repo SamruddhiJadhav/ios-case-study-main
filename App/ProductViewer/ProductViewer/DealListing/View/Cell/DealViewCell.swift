@@ -27,10 +27,14 @@ final class DealViewCell: UITableViewCell {
         listItemView.pinToSuperView()
     }
     
+    func cancelImageDownload() {
+        listItemView.cancelImageDownload()
+    }
+
     func configure(_ viewModel: DealViewModel?, _ imageProvider: ImageProviderProtocol) {
         guard let viewModel = viewModel else {
             return
         }
-        listItemView.configure(viewModel, imageProvider)
+        listItemView.configure(viewModel)
     }
 }

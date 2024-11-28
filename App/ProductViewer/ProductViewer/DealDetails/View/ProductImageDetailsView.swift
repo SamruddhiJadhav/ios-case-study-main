@@ -98,13 +98,12 @@ final class ProductImageDetailsView: UIView {
         ])
     }
     
-    func configure(_ viewModel: DealDetailsViewModel, _ imageProvider: ImageProviderProtocol) {
+    func configure(_ viewModel: DealDetailsViewModel) {
         titleLabel.text = viewModel.productName
         priceLabel.attributedText = viewModel.dealDetails
         fulfilmentTypeLabel.text = viewModel.fulfillmentType
         productImage.image(
             for: viewModel.imageURL,
-            imageProvider: imageProvider,
             size: CGSize(width: Constants.imageDimention, height: Constants.imageDimention)
         )
     }

@@ -91,8 +91,8 @@ final class DealDetailsView: UIView {
         )
     }
     
-    func configure(_ viewModel: DealDetailsViewModel, _ imageProvider: ImageProviderProtocol) {
-        scrollView.configure(viewModel, imageProvider)
+    func configure(_ viewModel: DealDetailsViewModel) {
+        scrollView.configure(viewModel)
         buttonConatiner.isHidden = false
     }
 }

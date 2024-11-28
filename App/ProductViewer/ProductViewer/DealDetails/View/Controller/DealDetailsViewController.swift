@@ -17,10 +17,7 @@ final class DealDetailsViewController: UIViewController {
     
     private var viewModel: DealDetailsViewModel?
     
-    private let imageProvider: ImageProviderProtocol
-    
-    init(imageProvider: ImageProviderProtocol) {
-        self.imageProvider = imageProvider
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -87,7 +84,7 @@ private extension DealDetailsViewController {
 extension DealDetailsViewController: DealDetailsViewProtocol {
     func updateView(_ dealDetails: DealDetailsViewModel) {
         self.viewModel = dealDetails
-        self.detailsView.configure(dealDetails, imageProvider)
+        self.detailsView.configure(dealDetails)
     }
     
     func showErrorMessage(_ message: String) {

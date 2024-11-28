@@ -14,8 +14,7 @@ protocol DealDetailsBuilding {
 
 struct DealDetailsBuilder: DealDetailsBuilding {
     func build(from model: DealDetailsPageModel) -> UIViewController {
-        let imageProvider = ImageProvider()
-        let view = DealDetailsViewController(imageProvider: imageProvider)
+        let view = DealDetailsViewController()
         let router = DealDetailsRouter()
         let dealDetailsService = DealDetailsService()
         let interactor = DealDetailsInteractor(dealDetailsService: dealDetailsService)

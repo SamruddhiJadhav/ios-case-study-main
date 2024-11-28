@@ -16,8 +16,8 @@ final class DealView: UIView {
         static let imageDimention: CGFloat = 140
     }
 
-    private lazy var productImage: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var productImage: DownloadableImageView = {
+        let imageView = DownloadableImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = Constants.cornerRadius
         imageView.clipsToBounds = true
@@ -125,15 +125,18 @@ final class DealView: UIView {
         ])
     }
     
-    func configure(_ viewModel: DealViewModel, _ imageProvider: ImageProviderProtocol) {
+    func configure(_ viewModel: DealViewModel) {
         availabilityAndLocationLabel.attributedText = viewModel.availabilityDetails
         titleLabel.text = viewModel.productName
         priceLabel.attributedText = viewModel.dealDetails
         fulfilmentTypeLabel.text = viewModel.fulfillmentType
         productImage.image(
             for: viewModel.imageURL,
-            imageProvider: imageProvider,
             size: CGSize(width: Constants.imageDimention, height: Constants.imageDimention)
         )
+    }
+    
+    func cancelImageDownload() {
+        productImage.cancelDownload()
     }
 }

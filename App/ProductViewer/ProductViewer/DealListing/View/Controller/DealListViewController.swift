@@ -120,6 +120,13 @@ extension DealListViewController {
         return makeDealCell(indexPath)
     }
     
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? DealViewCell else {
+            return
+        }
+        cell.cancelImageDownload()
+    }
+
     func makeDealCell(_ indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DealViewCell.reuseIdentifier) as? DealViewCell else {
             return UITableViewCell()
