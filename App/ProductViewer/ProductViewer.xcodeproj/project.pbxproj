@@ -67,6 +67,7 @@
 		887E7ED92CC652790033A861 /* DealDetailsViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7ED82CC652790033A861 /* DealDetailsViewModel+Mock.swift */; };
 		887E7EDB2CC65ADE0033A861 /* DealDetails+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */; };
 		88B6433E2CF821AC004209F8 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */; };
+		88B643402CF866C7004209F8 /* ImageDownsampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */; };
 		96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5F5280EE0C0009338BF /* Autolayout.swift */; };
 		96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */; };
 		96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */; };
@@ -144,6 +145,7 @@
 		887E7ED82CC652790033A861 /* DealDetailsViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DealDetailsViewModel+Mock.swift"; sourceTree = "<group>"; };
 		887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DealDetails+Mock.swift"; sourceTree = "<group>"; };
 		88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
+		88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownsampler.swift; sourceTree = "<group>"; };
 		9636D41727FF77E700FE8106 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D6F5F5280EE0C0009338BF /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				8808299F2CC4C15F0011BA18 /* ImageProvider.swift */,
+				88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */,
 			);
 			path = ImageProvider;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				5BEF081F1D663598006BF0C0 /* DealViewCell.swift in Sources */,
 				8808298B2CC3A1F40011BA18 /* DealDetailsInteractor.swift in Sources */,
 				880829912CC3A60B0011BA18 /* DealDetailsMapper.swift in Sources */,
+				88B643402CF866C7004209F8 /* ImageDownsampler.swift in Sources */,
 				887E7EBC2CC62C680033A861 /* DealsListBuilder.swift in Sources */,
 				887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */,
 				880829682CC240870011BA18 /* DealViewModel.swift in Sources */,
