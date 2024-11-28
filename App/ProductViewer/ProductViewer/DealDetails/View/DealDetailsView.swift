@@ -95,4 +95,8 @@ final class DealDetailsView: UIView {
         scrollView.configure(viewModel)
         buttonConatiner.isHidden = false
     }
+
+    func cancelImageDownload() {
+        scrollView.cancelImageDownload()
+    }
 }

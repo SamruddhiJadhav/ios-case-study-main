@@ -36,6 +36,10 @@ final class DealDetailsViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavigationBar()
     }
+    
+    deinit {
+        detailsView.cancelImageDownload()
+    }
 }
 
 private extension DealDetailsViewController {

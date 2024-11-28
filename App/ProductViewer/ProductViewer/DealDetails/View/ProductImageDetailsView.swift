@@ -107,4 +107,8 @@ final class ProductImageDetailsView: UIView {
             size: CGSize(width: Constants.imageDimention, height: Constants.imageDimention)
         )
     }
+    
+    func cancelImageDownload() {
+        productImage.cancelDownload()
+    }
 }

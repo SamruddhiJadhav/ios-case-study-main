@@ -78,4 +78,8 @@ final class ProductDetailsScrollView: UIScrollView {
         productDescriptionView.configure(viewModel)
         backgroundColor = .grayLight
     }
+    
+    func cancelImageDownload() {
+        productView.cancelImageDownload()
+    }
 }
