@@ -9,5 +9,5 @@
 import Foundation
 
 struct Environment {
-    static var baseURL = URL(string: "https://api.target.com/mobile_case_study_deals/v1")!
+    static var baseURL = URL(string: "https://api.target.com/mobile_case_study_deals/v1")
 }

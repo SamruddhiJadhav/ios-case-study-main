@@ -9,16 +9,13 @@
 import UIKit
 
 final class DealListRouter: DealListRouterProtocol {
-    private let dealDetailsbuilder: DealDetailsBuilding
+    private var selection: ((DealDetailsPageModel) -> Void)
     
-    init(dealDetailsBuilder: DealDetailsBuilding) {
-        self.dealDetailsbuilder = dealDetailsBuilder
+    init(selection: @escaping (DealDetailsPageModel) -> Void) {
+        self.selection = selection
     }
 
-    func showDealDetails(from view: DealListViewProtocol?, model: DealDetailsPageModel) {
-        let dealDetailsView = dealDetailsbuilder.build(from: model)
-        if let sourceView = view as? UIViewController, let navigationController = sourceView.navigationController {
-            navigationController.pushViewController(dealDetailsView, animated: true)
-        }
+    func onDidSelectDeal(model: DealDetailsPageModel) {
+        selection(model)
     }
 }

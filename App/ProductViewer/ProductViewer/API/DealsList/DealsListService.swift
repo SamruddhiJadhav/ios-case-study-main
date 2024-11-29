@@ -15,21 +15,28 @@ protocol DealsListServiceProtocol {
 }
 
 final class DealsListService: DealsListServiceProtocol {
-    private let url: URL
+    private let url: URL?
     private let client: HTTPClient
     
     typealias Result = DealsListServiceProtocol.Result
     
-    init(url: URL = Environment.baseURL, client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))) {
+    init(url: URL? = Environment.baseURL, client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))) {
         self.url = url
         self.client = client
     }
     
     func getDealsList(completion: @escaping (Result) -> Void) {
-        let url = DealsListEndpoint.get.url(baseURL: url)
-        client.get(from: url) { result in
+        guard let url = url else {
+            completion(.failure(ServiceError.invalidURL))
+            return
+        }
+        let dealsListEndpoint = DealsListEndpoint.get.url(baseURL: url)
+        client.get(from: dealsListEndpoint) { result in
             switch result {
             case let .success((data, response)):
+                if data.isEmpty {
+                    completion(.failure(ServiceError.invalidData))
+                }
                 completion(DealsListService.map(data, from: response))
             case .failure:
                 completion(.failure(ServiceError.connectivity))
@@ -44,7 +51,7 @@ private extension DealsListService {
             let items = try DealsListMapper.map(data, from: response)
             return .success(items)
         } catch {
-            return .failure(error)
+            return .failure(ServiceError.invalidData)
         }
     }
 }

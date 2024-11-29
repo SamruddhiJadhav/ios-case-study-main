@@ -17,10 +17,7 @@ final class DealDetailsViewController: UIViewController {
     
     private var viewModel: DealDetailsViewModel?
     
-    private let imageProvider: ImageProviderProtocol
-    
-    init(imageProvider: ImageProviderProtocol) {
-        self.imageProvider = imageProvider
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,8 +36,18 @@ final class DealDetailsViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavigationBar()
     }
+    
+    deinit {
+        detailsView.cancelImageDownload()
+    }
+}
 
-    private func setupViews() {
+private extension DealDetailsViewController {
+    @objc func didTapBack() {
+        presenter?.didTapBack()
+    }
+
+    func setupViews() {
         view.backgroundColor = .white
 
         view.addSubview(detailsView)
@@ -52,22 +59,22 @@ final class DealDetailsViewController: UIViewController {
         ])
     }
 
-    private func setupNavigationBar() {
+    func setupNavigationBar() {
         navigationController?.navigationBar.barStyle = .default
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = .backButton(self, action: #selector(didTapBack))
         navigationItem.title = "Detail"
     }
-    
-    private func setupLoadingIndicator() {
+      
+    func setupLoadingIndicator() {
         loadingIndicatorView.frame = view.frame
         loadingIndicatorView.backgroundColor = .white
         loadingIndicatorView.isHidden = true
-        
+            
         setupSpinner()
     }
-    
-    private func setupSpinner() {
+      
+    func setupSpinner() {
         loadingIndicator.center = CGPoint(
             x: UIScreen.main.bounds.size.width / 2,
             y: UIScreen.main.bounds.size.height / 2
@@ -81,7 +88,7 @@ final class DealDetailsViewController: UIViewController {
 extension DealDetailsViewController: DealDetailsViewProtocol {
     func updateView(_ dealDetails: DealDetailsViewModel) {
         self.viewModel = dealDetails
-        self.detailsView.configure(dealDetails, imageProvider)
+        self.detailsView.configure(dealDetails)
     }
     
     func showErrorMessage(_ message: String) {
@@ -99,22 +106,12 @@ extension DealDetailsViewController: DealDetailsViewProtocol {
     }
     
     func showLoadingIndicator() {
-        DispatchQueue.main.async {
-            self.loadingIndicator.startAnimating()
-            self.loadingIndicatorView.isHidden = false
-        }
+        loadingIndicator.startAnimating()
+        loadingIndicatorView.isHidden = false
     }
     
     func hideLoadingIndicator() {
-        DispatchQueue.main.async {
-            self.loadingIndicator.stopAnimating()
-            self.loadingIndicatorView.isHidden = true
-        }
+        loadingIndicator.stopAnimating()
+        loadingIndicatorView.isHidden = true
     }
-}
-
-private extension DealDetailsViewController {
-  @objc func didTapBack() {
-    presenter?.didTapBack()
-  }
 }

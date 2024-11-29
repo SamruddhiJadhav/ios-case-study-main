@@ -73,9 +73,13 @@ final class ProductDetailsScrollView: UIScrollView {
         ])
     }
     
-    func configure(_ viewModel: DealDetailsViewModel, _ imageProvider: ImageProviderProtocol) {
-        productView.configure(viewModel, imageProvider)
+    func configure(_ viewModel: DealDetailsViewModel) {
+        productView.configure(viewModel)
         productDescriptionView.configure(viewModel)
         backgroundColor = .grayLight
+    }
+    
+    func cancelImageDownload() {
+        productView.cancelImageDownload()
     }
 }

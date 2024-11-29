@@ -9,7 +9,7 @@
 import Foundation
 
 final class DealDetailsPresenter: DealDetailsPresenterProtocol {
-    private weak var view: DealDetailsViewProtocol?
+    private var view: DealDetailsViewProtocol?
     private let pageModel: DealDetailsPageModel
     private let router: DealDetailsRouterProtocol
     private let interactor: DealDetailsInteractorProtocol
@@ -30,7 +30,7 @@ final class DealDetailsPresenter: DealDetailsPresenterProtocol {
     }
 
     func didTapBack() {
-        router.closeView(view)
+        router.closeView()
     }
     
     func onViewDidLoad() {
@@ -39,7 +39,7 @@ final class DealDetailsPresenter: DealDetailsPresenterProtocol {
     }
     
     func didTapOk() {
-        router.closeView(view)
+        router.closeView()
     }
     
     func fetchDealDetails() {
@@ -48,16 +48,11 @@ final class DealDetailsPresenter: DealDetailsPresenterProtocol {
                 return
             }
             let viewModel = self.dataSourceBuilder.dealDetailsViewModel(deal)
-            DispatchQueue.main.async {
-                self.view?.updateView(viewModel)
-                self.view?.hideLoadingIndicator()
-            }
-            
+            self.view?.updateView(viewModel)
+            self.view?.hideLoadingIndicator()
         } onError: { [weak self] error in
-            DispatchQueue.main.async {
-                self?.view?.hideLoadingIndicator()
-                self?.view?.showErrorMessage("Sorry, we could not load the deal details.")
-            }
+            self?.view?.hideLoadingIndicator()
+            self?.view?.showErrorMessage("Sorry, we could not load the deal details.")
         }
     }
 }

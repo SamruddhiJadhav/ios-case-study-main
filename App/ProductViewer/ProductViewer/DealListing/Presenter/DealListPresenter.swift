@@ -9,19 +9,19 @@
 import Foundation
 
 final class DealListPresenter: DealListPresenterProtocol {
-    private weak var view: DealListViewProtocol?
+    private var view: DealListViewProtocol?
     private let router: DealListRouterProtocol
     private let interactor: DealListInteractorProtocol
     private let dataSourceBuilder: DealsListDataSourceBuilderProtocol
     
     init(
         view: DealListViewProtocol?,
-        wireframe: DealListRouterProtocol, 
+        router: DealListRouterProtocol,
         interactor: DealListInteractorProtocol,
         dataSourceBuilder: DealsListDataSourceBuilder
     ) {
         self.view = view
-        self.router = wireframe
+        self.router = router
         self.interactor = interactor
         self.dataSourceBuilder = dataSourceBuilder
     }
@@ -35,21 +35,17 @@ final class DealListPresenter: DealListPresenterProtocol {
             }
             
             let listViewModels = self.dataSourceBuilder.dealsListViewModel(dealList)
-            DispatchQueue.main.async {
-                self.view?.updateDealsList(listViewModels)
-                self.view?.hideLoadingIndicator()
-            }
+            view?.updateDealsList(listViewModels)
+            view?.hideLoadingIndicator()
         }, onError: { [weak self] error in
-            DispatchQueue.main.async {
-                self?.view?.showErrorMessage("Sorry we could not load the deal list")
-                self?.view?.hideLoadingIndicator()
-            }
+            self?.view?.showErrorMessage("Sorry we could not load the deal list")
+            self?.view?.hideLoadingIndicator()
         })
     }
     
     func onDidSelectDeal(_ viewModel: DealViewModel) {
         let pageModel = DealDetailsPageModel(dealId: viewModel.id)
-        router.showDealDetails(from: view, model: pageModel)
+        router.onDidSelectDeal(model: pageModel)
     }
     
     func didTapOk() {}

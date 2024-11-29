@@ -43,7 +43,6 @@
 		880829992CC4169D0011BA18 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829982CC4169D0011BA18 /* Environment.swift */; };
 		8808299C2CC4C0BD0011BA18 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8808299B2CC4C0BD0011BA18 /* SDWebImage */; };
 		880829A02CC4C15F0011BA18 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808299F2CC4C15F0011BA18 /* ImageProvider.swift */; };
-		880829A32CC4C2050011BA18 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A22CC4C2050011BA18 /* UIImageView+Extension.swift */; };
 		880829A52CC4E62F0011BA18 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */; };
 		880829A72CC5D35C0011BA18 /* DealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A62CC5D35C0011BA18 /* DealDetailsView.swift */; };
 		880829A92CC5D9FB0011BA18 /* ProductImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */; };
@@ -67,6 +66,11 @@
 		887E7ED72CC650500033A861 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7ED62CC650500033A861 /* XCTestCase+Extension.swift */; };
 		887E7ED92CC652790033A861 /* DealDetailsViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7ED82CC652790033A861 /* DealDetailsViewModel+Mock.swift */; };
 		887E7EDB2CC65ADE0033A861 /* DealDetails+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */; };
+		88B6433E2CF821AC004209F8 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */; };
+		88B643402CF866C7004209F8 /* ImageDownsampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */; };
+		88B643432CF881E4004209F8 /* MainQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643422CF881E4004209F8 /* MainQueueDecorator.swift */; };
+		88B643452CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */; };
+		88B643472CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643462CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift */; };
 		96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5F5280EE0C0009338BF /* Autolayout.swift */; };
 		96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */; };
 		96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */; };
@@ -120,7 +124,6 @@
 		880829962CC413850011BA18 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		880829982CC4169D0011BA18 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		8808299F2CC4C15F0011BA18 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		880829A22CC4C2050011BA18 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		880829A62CC5D35C0011BA18 /* DealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsView.swift; sourceTree = "<group>"; };
 		880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageDetailsView.swift; sourceTree = "<group>"; };
@@ -144,6 +147,11 @@
 		887E7ED62CC650500033A861 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		887E7ED82CC652790033A861 /* DealDetailsViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DealDetailsViewModel+Mock.swift"; sourceTree = "<group>"; };
 		887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DealDetails+Mock.swift"; sourceTree = "<group>"; };
+		88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
+		88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownsampler.swift; sourceTree = "<group>"; };
+		88B643422CF881E4004209F8 /* MainQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDecorator.swift; sourceTree = "<group>"; };
+		88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainQueueDecorator+DealListViewProtocol.swift"; sourceTree = "<group>"; };
+		88B643462CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainQueueDecorator+DealDetailsViewProtocol.swift"; sourceTree = "<group>"; };
 		9636D41727FF77E700FE8106 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D6F5F5280EE0C0009338BF /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 		5B259CC81D6630E0001D755F /* ProductViewer */ = {
 			isa = PBXGroup;
 			children = (
+				88B643412CF881CB004209F8 /* MainQueueDecorator */,
 				8808299E2CC4C14A0011BA18 /* Common */,
 				880829712CC36BA00011BA18 /* Network */,
 				880829442CC0C73C0011BA18 /* API */,
@@ -207,13 +216,14 @@
 		5BEF080F1D663283006BF0C0 /* DealListing */ = {
 			isa = PBXGroup;
 			children = (
-				965B6A6A283F57DC0080E9B4 /* View */,
-				880829752CC36CDB0011BA18 /* Interactor */,
-				880829472CC0F1300011BA18 /* Presenter */,
-				880829662CC23E090011BA18 /* Entity */,
-				880829742CC36CD10011BA18 /* Router */,
-				880829732CC36C7E0011BA18 /* Mapper */,
 				880829722CC36C1C0011BA18 /* Builder */,
+				880829632CC23D770011BA18 /* DataSourceBuilder */,
+				880829662CC23E090011BA18 /* Entity */,
+				880829752CC36CDB0011BA18 /* Interactor */,
+				880829732CC36C7E0011BA18 /* Mapper */,
+				880829472CC0F1300011BA18 /* Presenter */,
+				880829742CC36CD10011BA18 /* Router */,
+				965B6A6A283F57DC0080E9B4 /* View */,
 			);
 			path = DealListing;
 			sourceTree = "<group>";
@@ -258,6 +268,7 @@
 			children = (
 				5BEF08131D663304006BF0C0 /* DealListViewController.swift */,
 				8808295E2CC2386B0011BA18 /* DealListViewProtocol.swift */,
+				88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,7 +302,6 @@
 		880829662CC23E090011BA18 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				880829632CC23D770011BA18 /* DataSourceBuilder */,
 				880829672CC240870011BA18 /* DealViewModel.swift */,
 			);
 			path = Entity;
@@ -300,13 +310,13 @@
 		8808296C2CC3680D0011BA18 /* DealDetails */ = {
 			isa = PBXGroup;
 			children = (
+				8808297A2CC36D770011BA18 /* Builder */,
 				880829922CC3AB680011BA18 /* DataSourceBuilder */,
 				8808297B2CC36D810011BA18 /* Entity */,
-				8808297A2CC36D770011BA18 /* Builder */,
-				880829792CC36D6A0011BA18 /* Mapper */,
-				880829782CC36D5E0011BA18 /* Router */,
 				880829772CC36D580011BA18 /* Interactor */,
+				880829792CC36D6A0011BA18 /* Mapper */,
 				880829762CC36D500011BA18 /* Presenter */,
+				880829782CC36D5E0011BA18 /* Router */,
 				8808296D2CC368160011BA18 /* View */,
 			);
 			path = DealDetails;
@@ -329,6 +339,7 @@
 			children = (
 				8808296F2CC3683B0011BA18 /* DealDetailsViewController.swift */,
 				887E7EB92CC62BB50033A861 /* DealDetailsViewProtocol.swift */,
+				88B643462CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -459,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				8808299F2CC4C15F0011BA18 /* ImageProvider.swift */,
+				88B6433F2CF866C7004209F8 /* ImageDownsampler.swift */,
 			);
 			path = ImageProvider;
 			sourceTree = "<group>";
@@ -466,6 +478,7 @@
 		8808299E2CC4C14A0011BA18 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				88B6433C2CF8218C004209F8 /* Views */,
 				880829A12CC4C1E70011BA18 /* Extensions */,
 				8808299D2CC4C13A0011BA18 /* ImageProvider */,
 			);
@@ -475,7 +488,6 @@
 		880829A12CC4C1E70011BA18 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				880829A22CC4C2050011BA18 /* UIImageView+Extension.swift */,
 				880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */,
 			);
 			path = Extensions;
@@ -529,6 +541,22 @@
 				887E7EDA2CC65ADE0033A861 /* DealDetails+Mock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		88B6433C2CF8218C004209F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88B6433D2CF821AC004209F8 /* DownloadableImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88B643412CF881CB004209F8 /* MainQueueDecorator */ = {
+			isa = PBXGroup;
+			children = (
+				88B643422CF881E4004209F8 /* MainQueueDecorator.swift */,
+			);
+			path = MainQueueDecorator;
 			sourceTree = "<group>";
 		};
 		9636D41827FF77E700FE8106 /* ProductViewerTests */ = {
@@ -673,7 +701,9 @@
 				880829872CC38CD20011BA18 /* DealView.swift in Sources */,
 				880829612CC239290011BA18 /* DealListPresenterProtocol.swift in Sources */,
 				880829592CC116360011BA18 /* DealListInteractor.swift in Sources */,
+				88B643452CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
+				88B643432CF881E4004209F8 /* MainQueueDecorator.swift in Sources */,
 				880829552CC10BCF0011BA18 /* DealDetailsService.swift in Sources */,
 				96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */,
 				8808296A2CC333980011BA18 /* ProductDetailsScrollView.swift in Sources */,
@@ -682,13 +712,14 @@
 				880829652CC23D9C0011BA18 /* DealsListDataSourceBuilder.swift in Sources */,
 				880829A72CC5D35C0011BA18 /* DealDetailsView.swift in Sources */,
 				880829A02CC4C15F0011BA18 /* ImageProvider.swift in Sources */,
+				88B643472CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift in Sources */,
 				8808293F2CC0C6D70011BA18 /* HTTPClient.swift in Sources */,
 				96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */,
 				880829A52CC4E62F0011BA18 /* UINavigationBar+Extension.swift in Sources */,
 				5BEF081F1D663598006BF0C0 /* DealViewCell.swift in Sources */,
 				8808298B2CC3A1F40011BA18 /* DealDetailsInteractor.swift in Sources */,
-				880829A32CC4C2050011BA18 /* UIImageView+Extension.swift in Sources */,
 				880829912CC3A60B0011BA18 /* DealDetailsMapper.swift in Sources */,
+				88B643402CF866C7004209F8 /* ImageDownsampler.swift in Sources */,
 				887E7EBC2CC62C680033A861 /* DealsListBuilder.swift in Sources */,
 				887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */,
 				880829682CC240870011BA18 /* DealViewModel.swift in Sources */,
@@ -706,6 +737,7 @@
 				8808295D2CC1235B0011BA18 /* DealListRouter.swift in Sources */,
 				8808294D2CC0F2E40011BA18 /* DealsListMapper.swift in Sources */,
 				96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */,
+				88B6433E2CF821AC004209F8 /* DownloadableImageView.swift in Sources */,
 				880829832CC377C00011BA18 /* DealDetailsBuilder.swift in Sources */,
 				880829572CC1158E0011BA18 /* DealListPresenter.swift in Sources */,
 				887E7EB22CC62A870033A861 /* DealListRouterProtocol.swift in Sources */,

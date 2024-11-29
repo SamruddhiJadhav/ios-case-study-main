@@ -10,16 +10,25 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    
+    private lazy var navigationController = UINavigationController(
+        rootViewController: DealsListBuilder.build(selection: showDealsListDetails)
+    )
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let dealsListBuilder = DealsListBuilder()
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = UINavigationController(rootViewController: dealsListBuilder.build())
+        configureWindow()
+        return true
+    }
+    
+    func configureWindow() {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
-        return true
+    }
+
+    private func showDealsListDetails(for pageModel: DealDetailsPageModel) {
+        let detailsView = DealDetailsBuilder.build(from: pageModel)
+        navigationController.pushViewController(detailsView, animated: true)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

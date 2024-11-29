@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DealListRouterProtocol {
-    func showDealDetails(from view: DealListViewProtocol?, model: DealDetailsPageModel)
+    func onDidSelectDeal(model: DealDetailsPageModel)
 }

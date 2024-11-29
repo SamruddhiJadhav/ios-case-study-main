@@ -9,9 +9,13 @@
 import UIKit
 
 final class DealDetailsRouter: DealDetailsRouterProtocol {
-    func closeView(_ view: DealDetailsViewProtocol?) {
-        if let viewController = view as? UIViewController {
-            viewController.navigationController?.popViewController(animated: true)
-        }
+    private let view: DealDetailsViewController
+    
+    init(view: DealDetailsViewController) {
+        self.view = view
+    }
+    
+    func closeView() {
+        view.navigationController?.popViewController(animated: true)
     }
 }

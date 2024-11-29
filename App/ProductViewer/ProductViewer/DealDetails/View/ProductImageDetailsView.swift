@@ -17,8 +17,8 @@ final class ProductImageDetailsView: UIView {
         static let imageDimention: CGFloat = 343
     }
 
-    private lazy var productImage: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var productImage: DownloadableImageView = {
+        let imageView = DownloadableImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = Constants.cornerRadius
         imageView.clipsToBounds = true
@@ -98,15 +98,17 @@ final class ProductImageDetailsView: UIView {
         ])
     }
     
-    func configure(_ viewModel: DealDetailsViewModel, _ imageProvider: ImageProviderProtocol) {
+    func configure(_ viewModel: DealDetailsViewModel) {
         titleLabel.text = viewModel.productName
         priceLabel.attributedText = viewModel.dealDetails
         fulfilmentTypeLabel.text = viewModel.fulfillmentType
         productImage.image(
             for: viewModel.imageURL,
-            placeholder: UIImage(named: "placeholder"), 
-            imageProvider: imageProvider,
             size: CGSize(width: Constants.imageDimention, height: Constants.imageDimention)
         )
+    }
+    
+    func cancelImageDownload() {
+        productImage.cancelDownload()
     }
 }

@@ -12,5 +12,5 @@ protocol DealListViewProtocol: AnyObject {
     func updateDealsList(_ listViewModels: DealsListViewModel?)
     func showErrorMessage(_ message: String)
     func showLoadingIndicator()
-    func hideLoadingIndicator() 
+    func hideLoadingIndicator()
 }

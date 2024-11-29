@@ -11,4 +11,5 @@ import Foundation
 enum ServiceError: Swift.Error {
     case connectivity
     case invalidData
+    case invalidURL
 }

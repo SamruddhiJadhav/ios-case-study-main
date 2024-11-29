@@ -9,7 +9,7 @@
 import Foundation
 
 enum DealDetailsEndPoint {
-    case get(Int)
+    case get(dealID: Int)
     
     func url(baseURL: URL) -> URL {
         switch self {

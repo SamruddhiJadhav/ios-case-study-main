@@ -11,9 +11,11 @@ import UIKit
 
 protocol ImageProviderProtocol {
     func loadImage(from url: URL, resizeTo size: CGSize?, completion: @escaping (UIImage?) -> Void)
+    func cancelCurrentImageLoad()
 }
 
 final class ImageProvider: ImageProviderProtocol {
+    private var currentDownloadOperation: SDWebImageCombinedOperation?
     private let imageManager: SDWebImageManager
     
     init(imageManager: SDWebImageManager = SDWebImageManager.shared) {
@@ -21,33 +23,18 @@ final class ImageProvider: ImageProviderProtocol {
     }
 
     func loadImage(from url: URL, resizeTo size: CGSize? = nil, completion: @escaping (UIImage?) -> Void) {
-        imageManager.loadImage(with: url, options: .highPriority, progress: nil) { image, _, _, _, _, _ in
-            if let size = size, let image = image {
-                let resizedImage = self.resizeImage(image: image, targetSize: size)
+        cancelCurrentImageLoad()
+        currentDownloadOperation = imageManager.loadImage(with: url, options: .highPriority, progress: nil) { image, _, _, _, _, _ in
+            if let size = size, let imageData = image?.sd_imageData() {
+                let resizedImage = ImageDownsampler.resizeImage(data: NSData(data: imageData), for: size)
                 completion(resizedImage)
             } else {
                 completion(image)
             }
         }
     }
-}
-
-private extension ImageProvider {
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
-        let size = image.size
-
-        let widthRatio  = targetSize.width  / size.width
-        let heightRatio = targetSize.height / size.height
-
-        let scaleFactor = min(widthRatio, heightRatio)
-
-        let newSize = CGSize(width: size.width * scaleFactor, height: size.height * scaleFactor)
-
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-        image.draw(in: CGRect(origin: .zero, size: newSize))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return newImage
+    
+    func cancelCurrentImageLoad() {
+        currentDownloadOperation?.cancel()
     }
 }
