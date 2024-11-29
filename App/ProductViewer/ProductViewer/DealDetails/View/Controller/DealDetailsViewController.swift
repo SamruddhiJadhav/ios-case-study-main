@@ -106,16 +106,12 @@ extension DealDetailsViewController: DealDetailsViewProtocol {
     }
     
     func showLoadingIndicator() {
-        DispatchQueue.main.async {
-            self.loadingIndicator.startAnimating()
-            self.loadingIndicatorView.isHidden = false
-        }
+        loadingIndicator.startAnimating()
+        loadingIndicatorView.isHidden = false
     }
     
     func hideLoadingIndicator() {
-        DispatchQueue.main.async {
-            self.loadingIndicator.stopAnimating()
-            self.loadingIndicatorView.isHidden = true
-        }
+        loadingIndicator.stopAnimating()
+        loadingIndicatorView.isHidden = true
     }
 }

@@ -1,20 +1,20 @@
 //
-//  MainQueueDecorator+DealListViewProtocol.swift
+//  MainQueueDecorator+DealDetailsViewProtocol.swift
 //  ProductViewer
 //
-//  Created by Samruddhi Jadhav on 28/11/24.
+//  Created by Samruddhi Jadhav on 29/11/24.
 //  Copyright © 2024 Target. All rights reserved.
 //
 
 import Foundation
 
-extension MainQueueDecorator: DealListViewProtocol where T: DealListViewProtocol {
-    func updateDealsList(_ listViewModels: DealsListViewModel?) {
+extension MainQueueDecorator: DealDetailsViewProtocol where T: DealDetailsViewProtocol {
+    func updateView(_ dealDetails: DealDetailsViewModel) {
         DispatchQueue.main.async { [weak self] in
-            self?.decoratee?.updateDealsList(listViewModels)
+            self?.decoratee?.updateView(dealDetails)
         }
     }
-
+    
     func showErrorMessage(_ message: String) {
         DispatchQueue.main.async { [weak self] in
             self?.decoratee?.showErrorMessage(message)

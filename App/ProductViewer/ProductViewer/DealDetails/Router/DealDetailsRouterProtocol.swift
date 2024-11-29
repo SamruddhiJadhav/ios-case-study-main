@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DealDetailsRouterProtocol {
-    func closeView(_ view: DealDetailsViewProtocol?)
+    func closeView()
 }

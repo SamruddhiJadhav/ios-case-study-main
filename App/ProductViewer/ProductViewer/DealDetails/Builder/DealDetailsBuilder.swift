@@ -13,14 +13,16 @@ final class DealDetailsBuilder {
 
     static func build(from model: DealDetailsPageModel) -> UIViewController {
         let view = DealDetailsViewController()
-        let router = DealDetailsRouter()
+        let router = DealDetailsRouter(view: view)
         let dealDetailsService = DealDetailsService()
         let interactor = DealDetailsInteractor(dealDetailsService: dealDetailsService)
         let dataSourceBuilder = DealDetailsDataSourceBuilder()
 
+        let mainQueueDecoratedView = MainQueueDecorator(decoratee: view)
+
         let presenter = DealDetailsPresenter(
-            view: view,
-            router: router, 
+            view: mainQueueDecoratedView,
+            router: router,
             interactor: interactor,
             pageModel: model, 
             dataSourceBuilder: dataSourceBuilder

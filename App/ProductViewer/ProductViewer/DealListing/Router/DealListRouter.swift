@@ -9,7 +9,7 @@
 import UIKit
 
 final class DealListRouter: DealListRouterProtocol {
-    private let selection: (DealDetailsPageModel) -> Void
+    private var selection: ((DealDetailsPageModel) -> Void)
     
     init(selection: @escaping (DealDetailsPageModel) -> Void) {
         self.selection = selection

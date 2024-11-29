@@ -8,10 +8,10 @@
 
 import Foundation
 
-final class MainQueueDecorator<T> {
-    var decoratee: T
+final class MainQueueDecorator<T: AnyObject> {
+    weak var decoratee: T?
     
-    init(decoratee: T) {
+    init(decoratee: T?) {
         self.decoratee = decoratee
     }
 }
