@@ -16,14 +16,14 @@ class DealDetailsPresenterTests: XCTestCase {
     let dataSourceBuilderMock = DealDetailsDataSourceBuilderMock()
     
     func test_didTapBack_closesView() {
-        routerMock.expectations.append(expectation(description: "closeView(_:)"))
+        routerMock.expectations.append(expectation(description: "closeView()"))
         let presenter = makeSUT()
         presenter.didTapBack()
         wait(for: routerMock.expectations, timeout: XCTestExpectation.expectationTimeout)
     }
     
     func test_didTapOk_closesView() {
-        routerMock.expectations.append(expectation(description: "closeView(_:)"))
+        routerMock.expectations.append(expectation(description: "closeView()"))
         let presenter = makeSUT()
         presenter.didTapBack()
         wait(for: routerMock.expectations, timeout: XCTestExpectation.expectationTimeout)

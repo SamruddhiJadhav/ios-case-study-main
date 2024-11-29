@@ -12,7 +12,7 @@ import XCTest
 final class DealDetailsRouterMock: DealDetailsRouterProtocol {
     var expectations = [XCTestExpectation]()
 
-    func closeView(_ view: (any ProductViewer.DealDetailsViewProtocol)?) {
+    func closeView() {
         XCTestExpectation.fulfill(with: #function, from: expectations)
     }
 }
