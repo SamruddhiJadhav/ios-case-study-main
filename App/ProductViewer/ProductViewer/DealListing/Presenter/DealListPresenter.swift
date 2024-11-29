@@ -16,12 +16,12 @@ final class DealListPresenter: DealListPresenterProtocol {
     
     init(
         view: DealListViewProtocol?,
-        wireframe: DealListRouterProtocol,
+        router: DealListRouterProtocol,
         interactor: DealListInteractorProtocol,
         dataSourceBuilder: DealsListDataSourceBuilder
     ) {
         self.view = view
-        self.router = wireframe
+        self.router = router
         self.interactor = interactor
         self.dataSourceBuilder = dataSourceBuilder
     }
@@ -45,7 +45,7 @@ final class DealListPresenter: DealListPresenterProtocol {
     
     func onDidSelectDeal(_ viewModel: DealViewModel) {
         let pageModel = DealDetailsPageModel(dealId: viewModel.id)
-        router.showDealDetails(model: pageModel)
+        router.onDidSelectDeal(model: pageModel)
     }
     
     func didTapOk() {}

@@ -8,12 +8,10 @@
 
 import UIKit
 
-protocol DealDetailsBuilding {
-    func build(from model: DealDetailsPageModel) -> UIViewController
-}
+final class DealDetailsBuilder {
+    private init() {}
 
-struct DealDetailsBuilder: DealDetailsBuilding {
-    func build(from model: DealDetailsPageModel) -> UIViewController {
+    static func build(from model: DealDetailsPageModel) -> UIViewController {
         let view = DealDetailsViewController()
         let router = DealDetailsRouter()
         let dealDetailsService = DealDetailsService()

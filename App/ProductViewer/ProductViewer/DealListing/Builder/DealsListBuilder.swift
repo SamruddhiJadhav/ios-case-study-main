@@ -8,15 +8,13 @@
 
 import UIKit
 
-protocol DealsListBuilding {
-    func build() -> UIViewController
-}
+public final class DealsListBuilder {
+    private init() {}
 
-struct DealsListBuilder: DealsListBuilding {
-    func build() -> UIViewController {
+    static func build(selection: @escaping (DealDetailsPageModel) -> Void = { _ in }) -> UIViewController {
         let imageProvider = ImageProvider()
         let view = DealListViewController(imageProvider: imageProvider)
-        let wireframe = DealListRouter(dealDetailsBuilder: DealDetailsBuilder(), view: view)
+        let router = DealListRouter(selection: selection)
         let dealService = DealsListService()
         let dataSourceBuilder = DealsListDataSourceBuilder()
         let interactor = DealListInteractor(dealsListService: dealService)
@@ -25,7 +23,7 @@ struct DealsListBuilder: DealsListBuilding {
         
         let presenter = DealListPresenter(
             view: mainQueueDecoratedView,
-            wireframe: wireframe,
+            router: router,
             interactor: interactor,
             dataSourceBuilder: dataSourceBuilder
         )
