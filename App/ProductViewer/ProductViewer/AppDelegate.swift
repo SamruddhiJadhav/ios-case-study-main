@@ -10,9 +10,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    
+    private let analyticsEngine = FireBaseSDK()
+
     private lazy var navigationController = UINavigationController(
-        rootViewController: DealsListBuilder.build(selection: showDealsListDetails)
+        rootViewController: DealsListBuilder.build(
+            selection: showDealsListDetails,
+            analyticsEngine: analyticsEngine
+        )
     )
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
