@@ -10,19 +10,19 @@ import Foundation
 
 final class DealListAnalyticsInteractorDecorator: DealListInteractorProtocol {
     private let interactor: DealListInteractorProtocol
-    private let analytics: AnalyticsManager
+    private let analyticsManager: AnalyticsManager
     
     init(interactor: DealListInteractorProtocol, analytics: AnalyticsManager) {
         self.interactor = interactor
-        self.analytics = analytics
+        self.analyticsManager = analytics
     }
 
     func getDealsList(completion: @escaping (DealList) -> Void, onError: @escaping (any Error) -> Void) {
         interactor.getDealsList { [weak self] dealList in
-            self?.analytics.trackEvent(DealListFetchedEvent(name: "DealListFetchedEvent", metadata: ["1": "2"]))
+            self?.analyticsManager.trackEvent(DealListFetchedEvent(name: "DealListFetchedEvent", metadata: ["1": "2"]))
             completion(dealList)
         } onError: { [weak self] errorMessage in
-            self?.analytics.trackEvent(DealListFetchErrorEvent(name: "DealListFetchErrorEvent", metadata: ["3": "4"]))
+            self?.analyticsManager.trackEvent(DealListFetchErrorEvent(name: "DealListFetchErrorEvent", metadata: ["3": "4"]))
             onError(errorMessage)
         }
     }

@@ -31,6 +31,12 @@ public final class DealsListBuilder {
             interactor: analyticsInteractorDecorator,
             dataSourceBuilder: dataSourceBuilder
         )
+//        let crash = CrashlyticsLoginTracker(analyticsManager: manager)
+//        let fire = FirebaseLoginTracker(analyticsManager: manager)
+//        let composer = DealListPresenterComposer(manager: [presenter, crash, fire])
+//        
+//        view.presenter = composer
+        
         let analytics = DealListPresenterAnalyticsDecorator(manager, presenter)
         view.presenter = analytics
         return view
