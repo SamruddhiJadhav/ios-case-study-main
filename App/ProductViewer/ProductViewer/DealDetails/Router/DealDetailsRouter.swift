@@ -9,13 +9,13 @@
 import UIKit
 
 final class DealDetailsRouter: DealDetailsRouterProtocol {
-    private let view: DealDetailsViewController
+    private weak var view: DealDetailsViewController?
     
     init(view: DealDetailsViewController) {
         self.view = view
     }
     
     func closeView() {
-        view.navigationController?.popViewController(animated: true)
+        view?.navigationController?.popViewController(animated: true)
     }
 }

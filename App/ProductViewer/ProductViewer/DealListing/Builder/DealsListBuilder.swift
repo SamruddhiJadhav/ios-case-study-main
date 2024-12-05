@@ -37,8 +37,8 @@ public final class DealsListBuilder {
 //        
 //        view.presenter = composer
         
-        let analytics = DealListPresenterAnalyticsDecorator(manager, presenter)
-        view.presenter = analytics
+        let decoratedPresenter = DealListPresenterAnalyticsDecorator(manager, presenter)
+        view.presenter = decoratedPresenter
         return view
     }
 }

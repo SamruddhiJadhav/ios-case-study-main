@@ -9,7 +9,7 @@
 import Foundation
 
 final class DealDetailsPresenter: DealDetailsPresenterProtocol {
-    private var view: DealDetailsViewProtocol?
+    private let view: DealDetailsViewProtocol?
     private let pageModel: DealDetailsPageModel
     private let router: DealDetailsRouterProtocol
     private let interactor: DealDetailsInteractorProtocol
