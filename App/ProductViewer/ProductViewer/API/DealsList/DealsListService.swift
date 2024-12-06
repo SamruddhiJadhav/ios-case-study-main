@@ -20,7 +20,7 @@ final class DealsListService: DealsListServiceProtocol {
     
     typealias Result = DealsListServiceProtocol.Result
     
-    init(url: URL = Environment.baseURL, client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))) {
+    init(url: URL = Environment.baseURL, client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .default))) {
         self.url = url
         self.client = client
     }

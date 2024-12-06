@@ -22,7 +22,7 @@ final class DealDetailsService: DealDetailsServiceProtocol {
     
     init(
         url: URL = Environment.baseURL,
-        client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .default))
     ) {
         self.url = url
         self.client = client
