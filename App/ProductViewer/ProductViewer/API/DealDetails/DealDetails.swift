@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DealDetails: Codable, Equatable {
+struct DealDetails: Decodable, Equatable {
     let id: Int
     let title, aisle, description: String
     let imageURL: String
@@ -25,7 +25,7 @@ struct DealDetails: Codable, Equatable {
     }
 }
 
-struct DealDetailsPrice: Codable, Equatable {
+struct DealDetailsPrice: Decodable, Equatable {
     let amountInCents: Int
     let currencySymbol, displayString: String
 

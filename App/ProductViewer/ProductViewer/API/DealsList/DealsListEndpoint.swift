@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum DealsListEndpoint {
+enum DealsListEndpoint: APIEndpoint {
     case get
     
-    func url(baseURL: URL) -> URL {
+    var urlRequest: URLRequest {
         switch self {
         case .get:
-            return baseURL.appendingPathComponent("deals")
+            return URLRequest(url: Environment.baseURL.appendingPathComponent("deals"))
         }
     }
 }

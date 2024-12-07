@@ -1,25 +1,26 @@
 //
-//  DealDetailsMapper.swift
+//  DealsDataMapper.swift
 //  ProductViewer
 //
-//  Created by Samruddhi Jadhav on 19/10/24.
+//  Created by Samruddhi Jadhav on 17/10/24.
 //  Copyright © 2024 Target. All rights reserved.
 //
 
 import Foundation
 
-final class DealDetailsMapper {
+final class DealsDataMapper {
     enum Error: Swift.Error {
         case invalidData
     }
     
-    static func map(_ data: Data, from response: HTTPURLResponse) throws -> DealDetails {
+    static func map<T: Decodable>(_ data: Data, from response: HTTPURLResponse, asType: T.Type) throws -> T {
         let decoder = JSONDecoder()
-        guard isOK(response), let model = try? decoder.decode(DealDetails.self, from: data) else {
+        
+        guard isOK(response), let root = try? decoder.decode(asType, from: data) else {
             throw Error.invalidData
         }
         
-        return model
+        return root
     }
     
     private static func isOK(_ response: HTTPURLResponse) -> Bool {

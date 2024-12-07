@@ -8,11 +8,13 @@
 
 import Foundation
 
-struct DealList: Codable {
+struct DealList: Decodable {
+    typealias Model = Decodable
+    
     let products: [Deal]
 }
 
-struct Deal: Codable {
+struct Deal: Decodable {
     let id: Int
     let title, aisle, description: String
     let imageURL: String
@@ -30,15 +32,15 @@ struct Deal: Codable {
     }
 }
 
-enum Availability: String, Codable {
+enum Availability: String, Decodable {
     case inStock = "In stock"
 }
 
-enum Fulfillment: String, Codable {
+enum Fulfillment: String, Decodable {
     case online = "Online"
 }
 
-struct DealListPrice: Codable {
+struct DealListPrice: Decodable {
     let amountInCents: Int
     let currencySymbol: CurrencySymbol
     let displayString: String
@@ -50,6 +52,6 @@ struct DealListPrice: Codable {
     }
 }
 
-enum CurrencySymbol: String, Codable {
+enum CurrencySymbol: String, Decodable {
     case empty = "$"
 }

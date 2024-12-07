@@ -9,9 +9,9 @@
 import Foundation
 
 final class DealListInteractor: DealListInteractorProtocol {
-    private let dealsListService: DealsListService
+    private let dealsListService: DealsService<DealList>
     
-    init(dealsListService: DealsListService) {
+    init(dealsListService: DealsService<DealList>) {
         self.dealsListService = dealsListService
     }
 
@@ -19,7 +19,7 @@ final class DealListInteractor: DealListInteractorProtocol {
         completion: @escaping (DealList) -> Void,
         onError: @escaping (_ errorMessage: Error) -> Void
     ) {
-        dealsListService.getDealsList { result in
+        dealsListService.getDealsList(endpoint: DealsListEndpoint.get) { result in
             switch result {
             case let .success(list):
                 completion(list)

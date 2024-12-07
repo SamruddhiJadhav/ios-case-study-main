@@ -17,7 +17,7 @@ struct DealsListBuilder: DealsListBuilding {
         let imageProvider = ImageProvider()
         let view = DealListViewController(imageProvider: imageProvider)
         let wireframe = DealListRouter(dealDetailsBuilder: DealDetailsBuilder())
-        let dealService = DealsListService()
+        let dealService = DealsService<DealList>()
         let dataSourceBuilder = DealsListDataSourceBuilder()
         let interactor = DealListInteractor(dealsListService: dealService)
         let presenter = DealListPresenter(

@@ -15,12 +15,11 @@
 		8808293F2CC0C6D70011BA18 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808293E2CC0C6D70011BA18 /* HTTPClient.swift */; };
 		880829422CC0C7070011BA18 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829412CC0C7070011BA18 /* URLSessionHTTPClient.swift */; };
 		880829462CC0C7750011BA18 /* DealsListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829452CC0C7750011BA18 /* DealsListEndpoint.swift */; };
-		8808294D2CC0F2E40011BA18 /* DealsListMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808294C2CC0F2E40011BA18 /* DealsListMapper.swift */; };
+		8808294D2CC0F2E40011BA18 /* DealsDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808294C2CC0F2E40011BA18 /* DealsDataMapper.swift */; };
 		880829512CC0F68F0011BA18 /* DealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829502CC0F68F0011BA18 /* DealList.swift */; };
-		880829552CC10BCF0011BA18 /* DealDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829542CC10BCF0011BA18 /* DealDetailsService.swift */; };
 		880829572CC1158E0011BA18 /* DealListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829562CC1158E0011BA18 /* DealListPresenter.swift */; };
 		880829592CC116360011BA18 /* DealListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829582CC116360011BA18 /* DealListInteractor.swift */; };
-		8808295B2CC116A30011BA18 /* DealsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808295A2CC116A30011BA18 /* DealsListService.swift */; };
+		8808295B2CC116A30011BA18 /* DealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808295A2CC116A30011BA18 /* DealsService.swift */; };
 		8808295D2CC1235B0011BA18 /* DealListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808295C2CC1235B0011BA18 /* DealListRouter.swift */; };
 		8808295F2CC2386B0011BA18 /* DealListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808295E2CC2386B0011BA18 /* DealListViewProtocol.swift */; };
 		880829612CC239290011BA18 /* DealListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829602CC239290011BA18 /* DealListPresenterProtocol.swift */; };
@@ -37,7 +36,6 @@
 		880829892CC39F880011BA18 /* DealDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829882CC39F880011BA18 /* DealDetailsRouter.swift */; };
 		8808298B2CC3A1F40011BA18 /* DealDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808298A2CC3A1F40011BA18 /* DealDetailsInteractor.swift */; };
 		8808298F2CC3A52D0011BA18 /* DealDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8808298E2CC3A52D0011BA18 /* DealDetailsEndPoint.swift */; };
-		880829912CC3A60B0011BA18 /* DealDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829902CC3A60B0011BA18 /* DealDetailsMapper.swift */; };
 		880829942CC3AB770011BA18 /* DealDetailsDataSourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829932CC3AB770011BA18 /* DealDetailsDataSourceBuilder.swift */; };
 		880829972CC413850011BA18 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829962CC413850011BA18 /* ServiceError.swift */; };
 		880829992CC4169D0011BA18 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829982CC4169D0011BA18 /* Environment.swift */; };
@@ -48,6 +46,7 @@
 		880829A72CC5D35C0011BA18 /* DealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A62CC5D35C0011BA18 /* DealDetailsView.swift */; };
 		880829A92CC5D9FB0011BA18 /* ProductImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */; };
 		880829AB2CC613CE0011BA18 /* ProductDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829AA2CC613CE0011BA18 /* ProductDescriptionView.swift */; };
+		8850B81B2D0404DC006D1090 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850B81A2D0404DC006D1090 /* APIEndpoint.swift */; };
 		887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EAD2CC62A340033A861 /* DealListInteractorProtocol.swift */; };
 		887E7EB22CC62A870033A861 /* DealListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EB12CC62A870033A861 /* DealListRouterProtocol.swift */; };
 		887E7EB42CC62B450033A861 /* DealDetailsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EB32CC62B450033A861 /* DealDetailsInteractorProtocol.swift */; };
@@ -93,12 +92,11 @@
 		8808293E2CC0C6D70011BA18 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		880829412CC0C7070011BA18 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		880829452CC0C7750011BA18 /* DealsListEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListEndpoint.swift; sourceTree = "<group>"; };
-		8808294C2CC0F2E40011BA18 /* DealsListMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListMapper.swift; sourceTree = "<group>"; };
+		8808294C2CC0F2E40011BA18 /* DealsDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsDataMapper.swift; sourceTree = "<group>"; };
 		880829502CC0F68F0011BA18 /* DealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealList.swift; sourceTree = "<group>"; };
-		880829542CC10BCF0011BA18 /* DealDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsService.swift; sourceTree = "<group>"; };
 		880829562CC1158E0011BA18 /* DealListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListPresenter.swift; sourceTree = "<group>"; };
 		880829582CC116360011BA18 /* DealListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListInteractor.swift; sourceTree = "<group>"; };
-		8808295A2CC116A30011BA18 /* DealsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListService.swift; sourceTree = "<group>"; };
+		8808295A2CC116A30011BA18 /* DealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsService.swift; sourceTree = "<group>"; };
 		8808295C2CC1235B0011BA18 /* DealListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListRouter.swift; sourceTree = "<group>"; };
 		8808295E2CC2386B0011BA18 /* DealListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListViewProtocol.swift; sourceTree = "<group>"; };
 		880829602CC239290011BA18 /* DealListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		880829882CC39F880011BA18 /* DealDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsRouter.swift; sourceTree = "<group>"; };
 		8808298A2CC3A1F40011BA18 /* DealDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsInteractor.swift; sourceTree = "<group>"; };
 		8808298E2CC3A52D0011BA18 /* DealDetailsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsEndPoint.swift; sourceTree = "<group>"; };
-		880829902CC3A60B0011BA18 /* DealDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsMapper.swift; sourceTree = "<group>"; };
 		880829932CC3AB770011BA18 /* DealDetailsDataSourceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsDataSourceBuilder.swift; sourceTree = "<group>"; };
 		880829962CC413850011BA18 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		880829982CC4169D0011BA18 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -125,6 +122,7 @@
 		880829A62CC5D35C0011BA18 /* DealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsView.swift; sourceTree = "<group>"; };
 		880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageDetailsView.swift; sourceTree = "<group>"; };
 		880829AA2CC613CE0011BA18 /* ProductDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionView.swift; sourceTree = "<group>"; };
+		8850B81A2D0404DC006D1090 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		887E7EAD2CC62A340033A861 /* DealListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListInteractorProtocol.swift; sourceTree = "<group>"; };
 		887E7EB12CC62A870033A861 /* DealListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListRouterProtocol.swift; sourceTree = "<group>"; };
 		887E7EB32CC62B450033A861 /* DealDetailsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				880829472CC0F1300011BA18 /* Presenter */,
 				880829662CC23E090011BA18 /* Entity */,
 				880829742CC36CD10011BA18 /* Router */,
-				880829732CC36C7E0011BA18 /* Mapper */,
 				880829722CC36C1C0011BA18 /* Builder */,
 			);
 			path = DealListing;
@@ -274,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				880829502CC0F68F0011BA18 /* DealList.swift */,
-				8808295A2CC116A30011BA18 /* DealsListService.swift */,
 				880829452CC0C7750011BA18 /* DealsListEndpoint.swift */,
 			);
 			path = DealsList;
@@ -303,7 +299,6 @@
 				880829922CC3AB680011BA18 /* DataSourceBuilder */,
 				8808297B2CC36D810011BA18 /* Entity */,
 				8808297A2CC36D770011BA18 /* Builder */,
-				880829792CC36D6A0011BA18 /* Mapper */,
 				880829782CC36D5E0011BA18 /* Router */,
 				880829772CC36D580011BA18 /* Interactor */,
 				880829762CC36D500011BA18 /* Presenter */,
@@ -353,7 +348,7 @@
 		880829732CC36C7E0011BA18 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
-				8808294C2CC0F2E40011BA18 /* DealsListMapper.swift */,
+				8808294C2CC0F2E40011BA18 /* DealsDataMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -403,14 +398,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		880829792CC36D6A0011BA18 /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				880829902CC3A60B0011BA18 /* DealDetailsMapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
 		8808297A2CC36D770011BA18 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,7 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				880829802CC377530011BA18 /* DealDetails.swift */,
-				880829542CC10BCF0011BA18 /* DealDetailsService.swift */,
 				8808298E2CC3A52D0011BA18 /* DealDetailsEndPoint.swift */,
 			);
 			path = DealDetails;
@@ -449,6 +435,9 @@
 		880829952CC4136B0011BA18 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8850B81C2D040502006D1090 /* Service */,
+				8850B8192D0404C7006D1090 /* Endpoint */,
+				880829732CC36C7E0011BA18 /* Mapper */,
 				880829962CC413850011BA18 /* ServiceError.swift */,
 				880829982CC4169D0011BA18 /* Environment.swift */,
 			);
@@ -479,6 +468,22 @@
 				880829A42CC4E62F0011BA18 /* UINavigationBar+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8850B8192D0404C7006D1090 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				8850B81A2D0404DC006D1090 /* APIEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		8850B81C2D040502006D1090 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8808295A2CC116A30011BA18 /* DealsService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		887E7EBD2CC63D370033A861 /* Extensions */ = {
@@ -674,7 +679,6 @@
 				880829612CC239290011BA18 /* DealListPresenterProtocol.swift in Sources */,
 				880829592CC116360011BA18 /* DealListInteractor.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
-				880829552CC10BCF0011BA18 /* DealDetailsService.swift in Sources */,
 				96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */,
 				8808296A2CC333980011BA18 /* ProductDetailsScrollView.swift in Sources */,
 				880829AB2CC613CE0011BA18 /* ProductDescriptionView.swift in Sources */,
@@ -688,12 +692,11 @@
 				5BEF081F1D663598006BF0C0 /* DealViewCell.swift in Sources */,
 				8808298B2CC3A1F40011BA18 /* DealDetailsInteractor.swift in Sources */,
 				880829A32CC4C2050011BA18 /* UIImageView+Extension.swift in Sources */,
-				880829912CC3A60B0011BA18 /* DealDetailsMapper.swift in Sources */,
 				887E7EBC2CC62C680033A861 /* DealsListBuilder.swift in Sources */,
 				887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */,
 				880829682CC240870011BA18 /* DealViewModel.swift in Sources */,
 				880829702CC3683B0011BA18 /* DealDetailsViewController.swift in Sources */,
-				8808295B2CC116A30011BA18 /* DealsListService.swift in Sources */,
+				8808295B2CC116A30011BA18 /* DealsService.swift in Sources */,
 				887E7EB42CC62B450033A861 /* DealDetailsInteractorProtocol.swift in Sources */,
 				880829A92CC5D9FB0011BA18 /* ProductImageDetailsView.swift in Sources */,
 				880829812CC377530011BA18 /* DealDetails.swift in Sources */,
@@ -704,7 +707,7 @@
 				887E7EBA2CC62BB50033A861 /* DealDetailsViewProtocol.swift in Sources */,
 				880829972CC413850011BA18 /* ServiceError.swift in Sources */,
 				8808295D2CC1235B0011BA18 /* DealListRouter.swift in Sources */,
-				8808294D2CC0F2E40011BA18 /* DealsListMapper.swift in Sources */,
+				8808294D2CC0F2E40011BA18 /* DealsDataMapper.swift in Sources */,
 				96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */,
 				880829832CC377C00011BA18 /* DealDetailsBuilder.swift in Sources */,
 				880829572CC1158E0011BA18 /* DealListPresenter.swift in Sources */,
@@ -715,6 +718,7 @@
 				5BEF08141D663304006BF0C0 /* DealListViewController.swift in Sources */,
 				8808298F2CC3A52D0011BA18 /* DealDetailsEndPoint.swift in Sources */,
 				880829512CC0F68F0011BA18 /* DealList.swift in Sources */,
+				8850B81B2D0404DC006D1090 /* APIEndpoint.swift in Sources */,
 				880829422CC0C7070011BA18 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
