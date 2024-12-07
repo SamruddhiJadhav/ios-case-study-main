@@ -47,6 +47,7 @@
 		880829A72CC5D35C0011BA18 /* DealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A62CC5D35C0011BA18 /* DealDetailsView.swift */; };
 		880829A92CC5D9FB0011BA18 /* ProductImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */; };
 		880829AB2CC613CE0011BA18 /* ProductDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880829AA2CC613CE0011BA18 /* ProductDescriptionView.swift */; };
+		8842614D2D0170C90042A8B6 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842614C2D0170C90042A8B6 /* LoadingIndicatorView.swift */; };
 		887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EAD2CC62A340033A861 /* DealListInteractorProtocol.swift */; };
 		887E7EB22CC62A870033A861 /* DealListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EB12CC62A870033A861 /* DealListRouterProtocol.swift */; };
 		887E7EB42CC62B450033A861 /* DealDetailsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E7EB32CC62B450033A861 /* DealDetailsInteractorProtocol.swift */; };
@@ -71,6 +72,15 @@
 		88B643432CF881E4004209F8 /* MainQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643422CF881E4004209F8 /* MainQueueDecorator.swift */; };
 		88B643452CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */; };
 		88B643472CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643462CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift */; };
+		88B6434B2CF9B219004209F8 /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6434A2CF9B219004209F8 /* AnalyticsEngine.swift */; };
+		88B6434D2CF9B265004209F8 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6434C2CF9B265004209F8 /* AnalyticsEvent.swift */; };
+		88B643502CF9B2D3004209F8 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6434F2CF9B2D3004209F8 /* AnalyticsManager.swift */; };
+		88B643562CFD8CE9004209F8 /* DealListAnalyticsInteractorDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643552CFD8CE9004209F8 /* DealListAnalyticsInteractorDecorator.swift */; };
+		88B643582CFD8D0C004209F8 /* DealListPresenterAnalyticsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643572CFD8D0C004209F8 /* DealListPresenterAnalyticsDecorator.swift */; };
+		88B6435C2CFD8D58004209F8 /* DealListLoadedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6435B2CFD8D58004209F8 /* DealListLoadedEvent.swift */; };
+		88B6435E2CFD9131004209F8 /* DealListFetchedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6435D2CFD9131004209F8 /* DealListFetchedEvent.swift */; };
+		88B643602CFD9152004209F8 /* DealListFetchErrorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6435F2CFD9152004209F8 /* DealListFetchErrorEvent.swift */; };
+		88B643622CFDA0A0004209F8 /* ScreenNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B643612CFDA0A0004209F8 /* ScreenNames.swift */; };
 		96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5F5280EE0C0009338BF /* Autolayout.swift */; };
 		96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */; };
 		96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */; };
@@ -128,6 +138,7 @@
 		880829A62CC5D35C0011BA18 /* DealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsView.swift; sourceTree = "<group>"; };
 		880829A82CC5D9FB0011BA18 /* ProductImageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageDetailsView.swift; sourceTree = "<group>"; };
 		880829AA2CC613CE0011BA18 /* ProductDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionView.swift; sourceTree = "<group>"; };
+		8842614C2D0170C90042A8B6 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		887E7EAD2CC62A340033A861 /* DealListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListInteractorProtocol.swift; sourceTree = "<group>"; };
 		887E7EB12CC62A870033A861 /* DealListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListRouterProtocol.swift; sourceTree = "<group>"; };
 		887E7EB32CC62B450033A861 /* DealDetailsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailsInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -152,6 +163,15 @@
 		88B643422CF881E4004209F8 /* MainQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDecorator.swift; sourceTree = "<group>"; };
 		88B643442CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainQueueDecorator+DealListViewProtocol.swift"; sourceTree = "<group>"; };
 		88B643462CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainQueueDecorator+DealDetailsViewProtocol.swift"; sourceTree = "<group>"; };
+		88B6434A2CF9B219004209F8 /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
+		88B6434C2CF9B265004209F8 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		88B6434F2CF9B2D3004209F8 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		88B643552CFD8CE9004209F8 /* DealListAnalyticsInteractorDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListAnalyticsInteractorDecorator.swift; sourceTree = "<group>"; };
+		88B643572CFD8D0C004209F8 /* DealListPresenterAnalyticsDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListPresenterAnalyticsDecorator.swift; sourceTree = "<group>"; };
+		88B6435B2CFD8D58004209F8 /* DealListLoadedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListLoadedEvent.swift; sourceTree = "<group>"; };
+		88B6435D2CFD9131004209F8 /* DealListFetchedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListFetchedEvent.swift; sourceTree = "<group>"; };
+		88B6435F2CFD9152004209F8 /* DealListFetchErrorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListFetchErrorEvent.swift; sourceTree = "<group>"; };
+		88B643612CFDA0A0004209F8 /* ScreenNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNames.swift; sourceTree = "<group>"; };
 		9636D41727FF77E700FE8106 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D6F5F5280EE0C0009338BF /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
@@ -180,6 +200,8 @@
 		5B259CBD1D6630E0001D755F = {
 			isa = PBXGroup;
 			children = (
+				8842614B2D0170B10042A8B6 /* LoadingIndicator */,
+				88B643492CF9B202004209F8 /* Analytics */,
 				5B259CC81D6630E0001D755F /* ProductViewer */,
 				9636D41827FF77E700FE8106 /* ProductViewerTests */,
 				5B259CC71D6630E0001D755F /* Products */,
@@ -216,6 +238,7 @@
 		5BEF080F1D663283006BF0C0 /* DealListing */ = {
 			isa = PBXGroup;
 			children = (
+				88B6434E2CF9B2AF004209F8 /* Analytics */,
 				880829722CC36C1C0011BA18 /* Builder */,
 				880829632CC23D770011BA18 /* DataSourceBuilder */,
 				880829662CC23E090011BA18 /* Entity */,
@@ -493,6 +516,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8842614B2D0170B10042A8B6 /* LoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				8842614C2D0170C90042A8B6 /* LoadingIndicatorView.swift */,
+			);
+			path = LoadingIndicator;
+			sourceTree = "<group>";
+		};
 		887E7EBD2CC63D370033A861 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +588,45 @@
 				88B643422CF881E4004209F8 /* MainQueueDecorator.swift */,
 			);
 			path = MainQueueDecorator;
+			sourceTree = "<group>";
+		};
+		88B643492CF9B202004209F8 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				88B6434F2CF9B2D3004209F8 /* AnalyticsManager.swift */,
+				88B6434A2CF9B219004209F8 /* AnalyticsEngine.swift */,
+				88B6434C2CF9B265004209F8 /* AnalyticsEvent.swift */,
+				88B643612CFDA0A0004209F8 /* ScreenNames.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		88B6434E2CF9B2AF004209F8 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				88B6435A2CFD8D38004209F8 /* Decorators */,
+				88B643592CFD8D28004209F8 /* Events */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		88B643592CFD8D28004209F8 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				88B6435B2CFD8D58004209F8 /* DealListLoadedEvent.swift */,
+				88B6435D2CFD9131004209F8 /* DealListFetchedEvent.swift */,
+				88B6435F2CFD9152004209F8 /* DealListFetchErrorEvent.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		88B6435A2CFD8D38004209F8 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				88B643552CFD8CE9004209F8 /* DealListAnalyticsInteractorDecorator.swift */,
+				88B643572CFD8D0C004209F8 /* DealListPresenterAnalyticsDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		9636D41827FF77E700FE8106 /* ProductViewerTests */ = {
@@ -702,18 +772,24 @@
 				880829612CC239290011BA18 /* DealListPresenterProtocol.swift in Sources */,
 				880829592CC116360011BA18 /* DealListInteractor.swift in Sources */,
 				88B643452CF8820C004209F8 /* MainQueueDecorator+DealListViewProtocol.swift in Sources */,
+				8842614D2D0170C90042A8B6 /* LoadingIndicatorView.swift in Sources */,
 				5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */,
 				88B643432CF881E4004209F8 /* MainQueueDecorator.swift in Sources */,
 				880829552CC10BCF0011BA18 /* DealDetailsService.swift in Sources */,
 				96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */,
 				8808296A2CC333980011BA18 /* ProductDetailsScrollView.swift in Sources */,
 				880829AB2CC613CE0011BA18 /* ProductDescriptionView.swift in Sources */,
+				88B643502CF9B2D3004209F8 /* AnalyticsManager.swift in Sources */,
 				887E7EB82CC62B770033A861 /* DealDetailsPresenterProtocol.swift in Sources */,
 				880829652CC23D9C0011BA18 /* DealsListDataSourceBuilder.swift in Sources */,
 				880829A72CC5D35C0011BA18 /* DealDetailsView.swift in Sources */,
 				880829A02CC4C15F0011BA18 /* ImageProvider.swift in Sources */,
+				88B643622CFDA0A0004209F8 /* ScreenNames.swift in Sources */,
 				88B643472CF98261004209F8 /* MainQueueDecorator+DealDetailsViewProtocol.swift in Sources */,
 				8808293F2CC0C6D70011BA18 /* HTTPClient.swift in Sources */,
+				88B643582CFD8D0C004209F8 /* DealListPresenterAnalyticsDecorator.swift in Sources */,
+				88B6434B2CF9B219004209F8 /* AnalyticsEngine.swift in Sources */,
+				88B6435E2CFD9131004209F8 /* DealListFetchedEvent.swift in Sources */,
 				96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */,
 				880829A52CC4E62F0011BA18 /* UINavigationBar+Extension.swift in Sources */,
 				5BEF081F1D663598006BF0C0 /* DealViewCell.swift in Sources */,
@@ -722,6 +798,7 @@
 				88B643402CF866C7004209F8 /* ImageDownsampler.swift in Sources */,
 				887E7EBC2CC62C680033A861 /* DealsListBuilder.swift in Sources */,
 				887E7EAE2CC62A340033A861 /* DealListInteractorProtocol.swift in Sources */,
+				88B6434D2CF9B265004209F8 /* AnalyticsEvent.swift in Sources */,
 				880829682CC240870011BA18 /* DealViewModel.swift in Sources */,
 				880829702CC3683B0011BA18 /* DealDetailsViewController.swift in Sources */,
 				8808295B2CC116A30011BA18 /* DealsListService.swift in Sources */,
@@ -735,9 +812,11 @@
 				887E7EBA2CC62BB50033A861 /* DealDetailsViewProtocol.swift in Sources */,
 				880829972CC413850011BA18 /* ServiceError.swift in Sources */,
 				8808295D2CC1235B0011BA18 /* DealListRouter.swift in Sources */,
+				88B643602CFD9152004209F8 /* DealListFetchErrorEvent.swift in Sources */,
 				8808294D2CC0F2E40011BA18 /* DealsListMapper.swift in Sources */,
 				96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */,
 				88B6433E2CF821AC004209F8 /* DownloadableImageView.swift in Sources */,
+				88B643562CFD8CE9004209F8 /* DealListAnalyticsInteractorDecorator.swift in Sources */,
 				880829832CC377C00011BA18 /* DealDetailsBuilder.swift in Sources */,
 				880829572CC1158E0011BA18 /* DealListPresenter.swift in Sources */,
 				887E7EB22CC62A870033A861 /* DealListRouterProtocol.swift in Sources */,
@@ -748,6 +827,7 @@
 				8808298F2CC3A52D0011BA18 /* DealDetailsEndPoint.swift in Sources */,
 				880829512CC0F68F0011BA18 /* DealList.swift in Sources */,
 				880829422CC0C7070011BA18 /* URLSessionHTTPClient.swift in Sources */,
+				88B6435C2CFD8D58004209F8 /* DealListLoadedEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

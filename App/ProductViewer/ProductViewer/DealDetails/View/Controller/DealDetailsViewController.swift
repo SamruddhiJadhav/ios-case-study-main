@@ -10,9 +10,8 @@ import UIKit
 
 final class DealDetailsViewController: UIViewController {
     private lazy var detailsView = DealDetailsView()
-    private lazy var loadingIndicatorView = UIView()
-    private lazy var loadingIndicator = UIActivityIndicatorView(style: .medium)
-
+    private lazy var loadingIndicatorView = LoadingIndicatorView(frame: view.frame)
+    
     var presenter: DealDetailsPresenterProtocol?
     
     private var viewModel: DealDetailsViewModel?
@@ -28,7 +27,7 @@ final class DealDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setupLoadingIndicator()
+        
         presenter?.onViewDidLoad()
     }
 
@@ -51,7 +50,14 @@ private extension DealDetailsViewController {
         view.backgroundColor = .white
 
         view.addSubview(detailsView)
+        view.addSubview(loadingIndicatorView)
+        
         NSLayoutConstraint.activate([
+            loadingIndicatorView.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingIndicatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loadingIndicatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loadingIndicatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
             detailsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             detailsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             detailsView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -64,24 +70,6 @@ private extension DealDetailsViewController {
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = .backButton(self, action: #selector(didTapBack))
         navigationItem.title = "Detail"
-    }
-      
-    func setupLoadingIndicator() {
-        loadingIndicatorView.frame = view.frame
-        loadingIndicatorView.backgroundColor = .white
-        loadingIndicatorView.isHidden = true
-            
-        setupSpinner()
-    }
-      
-    func setupSpinner() {
-        loadingIndicator.center = CGPoint(
-            x: UIScreen.main.bounds.size.width / 2,
-            y: UIScreen.main.bounds.size.height / 2
-        )
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicatorView.addSubview(loadingIndicator)
-        view.addSubview(loadingIndicatorView)
     }
 }
 
@@ -106,12 +94,10 @@ extension DealDetailsViewController: DealDetailsViewProtocol {
     }
     
     func showLoadingIndicator() {
-        loadingIndicator.startAnimating()
-        loadingIndicatorView.isHidden = false
+        loadingIndicatorView.showLoadingIndicator()
     }
     
     func hideLoadingIndicator() {
-        loadingIndicator.stopAnimating()
-        loadingIndicatorView.isHidden = true
+        loadingIndicatorView.hideLoadingIndicator()
     }
 }

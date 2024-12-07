@@ -9,9 +9,7 @@ final class DealListViewController: UITableViewController {
     private var listViewModels: DealsListViewModel?
     private let imageProvider: ImageProviderProtocol
     
-    private lazy var loadingIndicatorView = UIView()
-    private lazy var loadingIndicator = UIActivityIndicatorView(style: .medium)
-    
+    private lazy var loadingIndicatorView = LoadingIndicatorView(frame: view.frame)
     
     init(imageProvider: ImageProviderProtocol) {
         self.imageProvider = imageProvider
@@ -45,22 +43,13 @@ final class DealListViewController: UITableViewController {
     }
     
     private func setupLoadingIndicator() {
-        loadingIndicatorView.frame = view.frame
-        loadingIndicatorView.backgroundColor = .lightGray
-        loadingIndicatorView.isHidden = true
-        
-        setupSpinner()
-    }
-    
-    private func setupSpinner() {
-        loadingIndicator.center = CGPoint(
-            x: UIScreen.main.bounds.size.width / 2,
-            y: UIScreen.main.bounds.size.height / 2
-        )
-        loadingIndicator.color = .gray
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicatorView.addSubview(loadingIndicator)
         view.addSubview(loadingIndicatorView)
+        NSLayoutConstraint.activate([
+            loadingIndicatorView.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingIndicatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loadingIndicatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loadingIndicatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
 }
 
@@ -85,13 +74,11 @@ extension DealListViewController: DealListViewProtocol {
     }
     
     func showLoadingIndicator() {
-        loadingIndicator.startAnimating()
-        loadingIndicatorView.isHidden = false
+        loadingIndicatorView.showLoadingIndicator()
     }
     
     func hideLoadingIndicator() {
-        loadingIndicator.stopAnimating()
-        loadingIndicatorView.isHidden = true
+        loadingIndicatorView.hideLoadingIndicator()
     }
 }
 
